@@ -1,0 +1,27 @@
+/* We need to write a method that display email address that suppose to be 
+build from Employee first letter from the first and the full last name
+and concatinate the domian e.g Naseer Khan userName:nakhan 
+and domain name e.g "contoso.com"*/
+
+string empfirstName="Naseer";
+string lastName="Khan";
+string domianName="contoso.com";
+DisplayEmailAddress(empfirstName,lastName,domianName);
+
+string DisplayEmailAddress(string empName,string lastName, string domianName){
+//take the first two letter from  fristName  
+    string firstTwoLetter=empName.Substring(0,2);
+    //string[] name=empName.Split(" ");
+    //const string spacePosition=" ";
+    //int startPosition=empName.IndexOf(spacePosition)+1;
+    //int lastPosition=empName.LastIndexOf(empName);
+    //int length=lastPosition-startPosition;
+    
+    //string empLastName=empName.Substring(startPosition,length); 
+    string email=firstTwoLetter+lastName;
+    email=email.ToLower();
+    Console.WriteLine($"{email}@{domianName}");
+    return $"{email}@{domianName}";
+    
+}
+
